@@ -1,97 +1,109 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# TaskMaster - React Native Task Manager App
 
-# Getting Started
+A modern, feature-rich Task Management mobile application built with **React Native** for the Kadel Labs Trainee Software Engineer (Android) position.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+![TaskMaster](https://via.placeholder.com/800x400/6C63FF/FFFFFF?text=TaskMaster)
 
-## Step 1: Start Metro
+## ✨ Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- ✅ Fetch tasks from REST API (JSONPlaceholder)
+- ✅ Full CRUD operations (Create, Read, Update, Delete)
+- ✅ Local persistence using AsyncStorage
+- ✅ Task filtering (All / Active / Completed)
+- ✅ Priority levels with color coding (High, Medium, Low)
+- ✅ Beautiful Task Cards with completion toggle
+- ✅ Detailed Task View with Edit & Delete
+- ✅ Profile Screen with statistics and progress
+- ✅ Clean, modern UI with smooth navigation
+- ✅ Responsive and user-friendly design
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## 🛠️ Tech Stack
 
-```sh
-# Using npm
-npm start
+- **React Native** (v0.85)
+- **React Navigation** (Native Stack)
+- **AsyncStorage** - Local data persistence
+- **JavaScript (ES6+)**
+- **REST API Integration** (`fetch`)
+- **Android Studio + Emulator**
 
-# OR using Yarn
-yarn start
-```
+## 📁 Project Structure
+TaskMaster/
+├── android/                  # Android native code
+├── src/
+│   ├── screens/
+│   │   ├── HomeScreen.js
+│   │   ├── AddTaskScreen.js
+│   │   ├── TaskDetailScreen.js
+│   │   └── ProfileScreen.js
+│   ├── components/
+│   │   └── TaskCard.js
+│   ├── api/
+│   │   └── taskApi.js
+│   └── utils/
+│       └── storage.js
+├── App.js
+├── package.json
+└── README.md
+text## 🚀 Quick Start
 
-## Step 2: Build and run your app
+### Prerequisites
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- Node.js (LTS version)
+- Android Studio with SDK (API 34 recommended)
+- Android Emulator or physical device
+- Java JDK 17+
 
-### Android
+### Installation
 
-```sh
-# Using npm
-npm run android
+1. **Clone the repository**
 
-# OR using Yarn
-yarn android
-```
+```bash
+git clone <your-repo-url>
+cd TaskMaster
 
-### iOS
+Install dependencies
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+Bashnpm install
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+Install AsyncStorage (Important)
 
-```sh
-bundle install
-```
+Bashnpm install @react-native-async-storage/async-storage@2.2.0
 
-Then, and every time you update your native dependencies, run:
+Clean Android build
 
-```sh
-bundle exec pod install
-```
+Bashcd android
+.\gradlew clean
+cd ..
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+Start Metro Bundler
 
-```sh
-# Using npm
-npm run ios
+Bashnpx react-native start --reset-cache
 
-# OR using Yarn
-yarn ios
-```
+Run on Android (in a new terminal)
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+Bashnpx react-native run-android
+📱 App Screens
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+Home — Task list with filters and stats
+Add Task — Create new tasks with priority
+Task Detail — View, edit, and delete tasks
+Profile — User stats, completion rate, and settings
 
-## Step 3: Modify your app
+🎯 What This Project Demonstrates
 
-Now that you have successfully run the app, let's make changes!
+REST API integration and JSON handling
+State management and data persistence
+Navigation between multiple screens
+Clean component architecture
+Responsive and accessible UI/UX
+Error handling and loading states
+Git-friendly project structure
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+🔧 Future Enhancements (Planned)
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Dark/Light theme toggle
+Push notifications
+Due dates and reminders
+Search functionality
+Task categories
+Backend integration (Firebase / Node.js)
