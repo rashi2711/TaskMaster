@@ -1,34 +1,36 @@
 # TaskMaster - React Native Task Manager App
 
-A modern, feature-rich Task Management mobile application built with **React Native** for the Kadel Labs Trainee Software Engineer (Android) position.
+A modern, feature-rich **Task Management** mobile application built with **React Native** for the **Kadel Labs Trainee Software Engineer (Android)** position.
 
-![TaskMaster](https://via.placeholder.com/800x400/6C63FF/FFFFFF?text=TaskMaster)
+![TaskMaster Banner](https://via.placeholder.com/800x400/6C63FF/FFFFFF?text=TaskMaster)
 
 ## ✨ Features
 
-- ✅ Fetch tasks from REST API (JSONPlaceholder)
-- ✅ Full CRUD operations (Create, Read, Update, Delete)
-- ✅ Local persistence using AsyncStorage
-- ✅ Task filtering (All / Active / Completed)
+- ✅ Fetch tasks from public REST API (JSONPlaceholder)
+- ✅ Full **CRUD** operations (Create, Read, Update, Delete)
+- ✅ Local data persistence using **AsyncStorage**
+- ✅ Smart task filtering (All / Active / Completed)
 - ✅ Priority levels with color coding (High, Medium, Low)
-- ✅ Beautiful Task Cards with completion toggle
-- ✅ Detailed Task View with Edit & Delete
-- ✅ Profile Screen with statistics and progress
+- ✅ Beautiful interactive Task Cards with toggle completion
+- ✅ Detailed Task View with Edit and Delete options
+- ✅ Profile Screen with statistics and completion progress
 - ✅ Clean, modern UI with smooth navigation
-- ✅ Responsive and user-friendly design
+- ✅ Fully responsive and user-friendly design
 
 ## 🛠️ Tech Stack
 
-- **React Native** (v0.85)
-- **React Navigation** (Native Stack)
-- **AsyncStorage** - Local data persistence
+- **React Native** v0.85
+- **React Navigation** (Native Stack Navigator)
+- **@react-native-async-storage/async-storage** (v2.2.0)
 - **JavaScript (ES6+)**
-- **REST API Integration** (`fetch`)
-- **Android Studio + Emulator**
+- **REST API Integration** using `fetch`
+- **Android Studio** + Emulator
 
 ## 📁 Project Structure
+
+```bash
 TaskMaster/
-├── android/                  # Android native code
+├── android/                    # Android native files
 ├── src/
 │   ├── screens/
 │   │   ├── HomeScreen.js
@@ -44,66 +46,48 @@ TaskMaster/
 ├── App.js
 ├── package.json
 └── README.md
-text## 🚀 Quick Start
+🚀 Quick Start
+Prerequisites
 
-### Prerequisites
+Node.js (LTS version)
+Android Studio with SDK (API 34 or higher recommended)
+Android Emulator or physical device connected
+Java JDK 17+
 
-- Node.js (LTS version)
-- Android Studio with SDK (API 34 recommended)
-- Android Emulator or physical device
-- Java JDK 17+
+Installation & Setup
 
-### Installation
-
-1. **Clone the repository**
-
-```bash
-git clone <your-repo-url>
+Clone the repositoryBashgit clone https://github.com/rashi2711/TaskMaster.git
 cd TaskMaster
-
-Install dependencies
-
-Bashnpm install
-
-Install AsyncStorage (Important)
-
-Bashnpm install @react-native-async-storage/async-storage@2.2.0
-
-Clean Android build
-
-Bashcd android
+Install dependenciesBashnpm install
+Install compatible AsyncStorageBashnpm install @react-native-async-storage/async-storage@2.2.0
+Clean Android buildBashcd android
 .\gradlew clean
 cd ..
+Start Metro Bundler (keep this terminal running)Bashnpx react-native start --reset-cache
+Run the app on Android (open a new terminal)Bashnpx react-native run-android
 
-Start Metro Bundler
-
-Bashnpx react-native start --reset-cache
-
-Run on Android (in a new terminal)
-
-Bashnpx react-native run-android
 📱 App Screens
 
-Home — Task list with filters and stats
-Add Task — Create new tasks with priority
-Task Detail — View, edit, and delete tasks
-Profile — User stats, completion rate, and settings
+Home — Task list with stats, filters, and Floating Action Button
+Add Task — Create new tasks with title, description & priority
+Task Detail — View full details, edit, and delete tasks
+Profile — User stats, completion rate, streak & settings
 
 🎯 What This Project Demonstrates
 
-REST API integration and JSON handling
-State management and data persistence
-Navigation between multiple screens
-Clean component architecture
-Responsive and accessible UI/UX
-Error handling and loading states
-Git-friendly project structure
+REST API integration and JSON data handling
+State management and persistent storage
+Multi-screen navigation using React Navigation
+Clean, modular and scalable component architecture
+Modern mobile UI/UX principles
+Proper error handling and loading states
+Professional project structure suitable for production
 
 🔧 Future Enhancements (Planned)
 
-Dark/Light theme toggle
-Push notifications
-Due dates and reminders
-Search functionality
-Task categories
-Backend integration (Firebase / Node.js)
+Dark / Light theme toggle
+Push notifications for task reminders
+Due dates and calendar integration
+Search and sort functionality
+Task categories / labels
+Backend integration (Firebase or custom API)
